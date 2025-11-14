@@ -12,5 +12,12 @@ public class JDBCConfigTest {
           BikeDAO bikeDAO = context.getBean("bikeDao",BikeDAO.class);
           int bikeCount = bikeDAO.getNoOfBikes();
         System.out.println("bikeCount: "+bikeCount);
+
+        String bikeName = bikeDAO.getNoOfBikeName(1);
+        System.out.println(bikeName);
+
+        BikeBo bikeBo = bikeDAO.getBikeInfo(3);
+        System.out.println(bikeBo);
+
     }
 }
